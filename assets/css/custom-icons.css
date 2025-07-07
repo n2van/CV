@@ -1,0 +1,54 @@
+/* Custom PNG Icon Styles */
+.social-icon li a img {
+  width: 24px;
+  height: 24px;
+  margin-top: -2px;
+  transition: all 0.5s ease-in-out;
+  filter: brightness(1) invert(0); /* Make icons show original colors by default */
+  transform: rotate(0deg) !important;
+  object-fit: contain;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.social-icon li a:hover img {
+  filter: brightness(0) invert(1); /* Make icons white on hover */
+  transform: rotate(0deg) scale(1.1) !important;
+}
+
+/* Specific hover effects for each platform */
+.social-icon li a.github:hover {
+  background: #333;
+}
+
+.social-icon li a.linkedin:hover {
+  background: #0077B5;
+}
+
+.social-icon li a.huggingface:hover { 
+  background: #FF9D00;
+}
+
+.social-icon li a.mail:hover {
+  background: #EA4335;
+}
+
+/* Ensure consistent sizing and alignment */ 
+.social-icon li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  position: relative;
+}
+
+/* Specific fix for GitHub icon if it's rotated */
+.social-icon li a.github img {
+  transform: rotate(0deg) !important;
+}
+
+.social-icon li a.github:hover img {
+  transform: rotate(0deg) scale(1.1) !important;
+}

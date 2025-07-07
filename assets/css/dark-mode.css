@@ -1,0 +1,292 @@
+/* Dark Mode Styles */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --card-bg: #ffffff;
+  --border-color: #e0e0e0;
+  --navbar-bg: rgba(255, 255, 255, 0.95);
+  --section-bg: #f8f9fa;
+  --overlay-bg: rgba(0, 0, 0, 0.8);
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --card-bg: #2d2d2d;
+  --border-color: #404040;
+  --navbar-bg: rgba(26, 26, 26, 0.95);
+  --section-bg: #222222;
+  --overlay-bg: rgba(0, 0, 0, 0.9);
+}
+
+/* Dark Mode Toggle Button in Navbar */
+.nav-link.dark-mode-toggle-navbar {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 15px;
+  transition: all 0.3s ease;
+}
+
+.nav-link.dark-mode-toggle-navbar:hover {
+  color: #007bff !important;
+  transform: scale(1.1);
+}
+
+.nav-link.dark-mode-toggle-navbar img {
+  width: 24px !important;
+  height: 24px !important;
+  transition: all 0.3s ease;
+  opacity: 1 !important;
+  display: block !important;
+}
+
+.nav-link.dark-mode-toggle-navbar:hover img {
+  opacity: 1 !important;
+  transform: scale(1.1);
+}
+
+[data-theme="dark"] .nav-link.dark-mode-toggle-navbar img {
+  opacity: 1 !important;
+}
+
+[data-theme="dark"] .nav-link.dark-mode-toggle-navbar:hover img {
+  opacity: 1 !important;
+}
+
+[data-theme="dark"] .nav-link.dark-mode-toggle-navbar:hover {
+  color: #007bff !important;
+}
+
+/* Ensure navbar is visible */
+.navbar-collapse {
+  display: flex !important;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    display: none !important;
+  }
+  .navbar-collapse.show {
+    display: block !important;
+  }
+}
+
+/* Apply dark mode variables */
+[data-theme="dark"] body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .navbar {
+  background-color: var(--navbar-bg) !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .navbar-brand,
+[data-theme="dark"] .nav-link {
+  color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .nav-link:hover {
+  color: #007bff !important;
+}
+
+/* Hero Section */
+[data-theme="dark"] #hero-area {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/hero-area.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+[data-theme="dark"] .hero-area-bg .overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Sections */
+[data-theme="dark"] section {
+  background-color: var(--bg-color);
+}
+
+[data-theme="dark"] .section-padding {
+  background-color: var(--section-bg);
+}
+
+[data-theme="dark"] #about {
+  background-color: var(--bg-color);
+}
+
+[data-theme="dark"] #services {
+  background-color: var(--section-bg);
+}
+
+[data-theme="dark"] #resume {
+  background-color: var(--bg-color);
+}
+
+[data-theme="dark"] #portfolios {
+  background-color: var(--section-bg);
+}
+
+[data-theme="dark"] #contact {
+  background-color: var(--bg-color);
+}
+
+/* Cards and Services */
+[data-theme="dark"] .services-item {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .services-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .services-item .icon {
+  color: #007bff;
+}
+
+[data-theme="dark"] .services-item h3 a {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .services-item p {
+  color: #b0b0b0;
+}
+
+/* Portfolio */
+[data-theme="dark"] .portfolio-item {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .portfolio-item .overlay {
+  background: var(--overlay-bg);
+}
+
+/* Timeline */
+[data-theme="dark"] .timeline li {
+  border-left: 2px solid var(--border-color);
+}
+
+[data-theme="dark"] .timeline .content-text {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .timeline .line-title {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .timeline .line-text {
+  color: #b0b0b0;
+}
+
+/* Counter Section */
+[data-theme="dark"] .counter-section {
+  background-color: var(--section-bg);
+}
+
+[data-theme="dark"] .counter {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .counter .icon {
+  color: #007bff;
+}
+
+/* Contact Form */
+[data-theme="dark"] .contact-form {
+  background-color: var(--bg-color);
+}
+
+[data-theme="dark"] .contact-block {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+[data-theme="dark"] .footer-right-area {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+[data-theme="dark"] .single-contact p,
+[data-theme="dark"] .single-contact a {
+  color: var(--text-color);
+}
+
+/* Footer */
+[data-theme="dark"] .footer-area {
+  background-color: var(--section-bg);
+  border-top: 1px solid var(--border-color);
+}
+
+/* Buttons */
+[data-theme="dark"] .btn-common {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+[data-theme="dark"] .btn-common:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+[data-theme="dark"] .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Filter buttons */
+[data-theme="dark"] .controls .filter {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .controls .filter:hover,
+[data-theme="dark"] .controls .filter.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Section titles */
+[data-theme="dark"] .section-title {
+  color: var(--text-color);
+}
+
+/* Profile wrapper */
+[data-theme="dark"] .profile-wrapper {
+  background-color: var(--card-bg);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .admin-profile li {
+  border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .pro-title {
+  color: #b0b0b0;
+}
+
+[data-theme="dark"] .pro-detail {
+  color: var(--text-color);
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
