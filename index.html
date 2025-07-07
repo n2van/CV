@@ -32,6 +32,9 @@
   <!-- Dark Mode Style -->
   <link rel="stylesheet" type="text/css" href="assets/css/dark-mode.css">
 
+  <!-- Pre-load Gradio Script -->
+  <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/5.35.0/gradio.js"></script>
+
 </head>
 
 <body>
@@ -257,9 +260,9 @@
   <!-- Resume Section Start -->
   <div id="resume" class="section-padding">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-6">
-          <div class="education wow fadeInRight" data-wow-delay="0.3s">
+      <div class="row justify-content-center">
+        <div class="col-lg-9 col-md-10 col-sm-12">
+          <div class="education wow fadeInRight" data-wow-delay="0.3s" style="margin-bottom: 40px;">
             <ul class="timeline">
               <li>
                 <i class="icon-graduation"></i>
@@ -275,7 +278,9 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-6">
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-9 col-md-10 col-sm-12">
           <div class="experience wow fadeInRight" data-wow-delay="0.6s">
             <ul class="timeline">
               <li>
@@ -286,24 +291,46 @@
                 <div class="content-text">
                   <h3 class="line-title">AI-Engineer - ATM wigs </h3>
                   <span>2024 - Present</span>
-                  <p class="line-text">Expenses as material breeding insisted building to in. Continual so distrusts
-                    pronounce by unwilling listening. Thing do taste on we manor.</p>
+                  <h5 class="line-title">Virtual Wig Try-On</h5>
+                  <p class="line-text">
+                    AI-powered face shape analysis and wig overlay with automatic hairstyle recommendations based on
+                    facial features.</p>
+                  <span></span>
+                  <h5 class="line-title">AI Chatbot for Customer servive</h5>
+                  <p class="line-text">
+                    Integrated with WhatsApp Cloud API, the chatbot uses GPT-4o or GPT-4.5 to answer product and
+                    service-related questions, provide shopping guidance, and support natural conversations.
+                    It includes a smart fallback to human agents when needed and remembers customer history for
+                    personalized responses.</p>
                 </div>
               </li>
               <li>
                 <div class="content-text">
                   <h3 class="line-title">Data Scientist & AI-Engineer - FPT fis</h3>
                   <span>2022 - 2024</span>
-                  <p class="line-text">Expenses as material breeding insisted building to in. Continual so distrusts
-                    pronounce by unwilling listening. Thing do taste on we manor.</p>
+                  <h5 class="line-title">Virtual Clothes Try-On</h5>
+                  <p class="line-text">AI-trained models enable users to virtually try on clothes and dresses by
+                    overlaying garments on user photos, enhancing the online shopping experience with realistic visual
+                    previews.</p>
+                  <span></span>
+                  <h5 class="line-title">Customer Behavior Analysis & Smart Recommendations</h5>
+                  <p class="line-text">We analyze customer behavior data and apply machine learning models to segment
+                    users and generate personalized recommendations based on their actions and similar customer
+                    profiles.
                 </div>
               </li>
               <li>
                 <div class="content-text">
                   <h3 class="line-title">Data Scientist - Cathay Life</h3>
                   <span>2020 - 2022</span>
+                  <h5 class="line-title">Sales Performance Analytics & Commission Tracking</h5>
                   <p class="line-text">Expenses as material breeding insisted building to in. Continual so distrusts
                     pronounce by unwilling listening. Thing do taste on we manor.</p>
+                  <span></span>
+                  <h5 class="line-title">Customer Segmentation & Business Growth Optimization</h5>
+                  <p class="line-text">Predict customer churn and analyze cost-risk-profit trade-offs using data-driven
+                    models to support strategic planning. The system recommends suitable service packages tailored to
+                    customer needs while optimizing business growth.</p>
                 </div>
               </li>
             </ul>

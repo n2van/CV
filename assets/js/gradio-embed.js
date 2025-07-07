@@ -7,24 +7,44 @@ document.addEventListener('DOMContentLoaded', function () {
     const gradioApps = {
         'img-1.jpg': {
             title: '3D Image Generation',
-            src: 'https://vannguyen1214-direct-3d-one-image.hf.space'
+            src: 'https://vannguyen1214-direct-3d-one-image.hf.space',
+            script: {
+                type: 'module',
+                src: 'https://gradio.s3-us-west-2.amazonaws.com/5.35.0/gradio.js'
+            }
         },
         'img-2.jpg': {
             title: 'SwapFace',
-            src: 'https://vannguyen1214-swapface.hf.space'
+            src: 'https://vannguyen1214-swapface.hf.space',
+            script: {
+                type: 'module',
+                src: 'https://gradio.s3-us-west-2.amazonaws.com/5.35.0/gradio.js'
+            }
         },
         'img-3.jpg': {
-            title: 'Tryon  Wigs',
-            src: 'https://vannguyen1214-be-rejection.hf.space'
+            title: 'Tryon Wigs',
+            src: 'https://vannguyen1214-be-rejection.hf.space',
+            script: {
+                type: 'module',
+                src: 'https://gradio.s3-us-west-2.amazonaws.com/5.35.0/gradio.js'
+            }
         },
         'img-4.jpg': {
             title: 'Pandorama Room Layout',
-            src: 'https://vannguyen1214-room-layout.hf.space'
+            src: 'https://vannguyen1214-room-layout.hf.space',
+            script: {
+                type: 'module',
+                src: 'https://gradio.s3-us-west-2.amazonaws.com/5.35.0/gradio.js'
+            }
         },
         'img-5.jpg': {
             title: 'Fashion Shop',
-            src: 'https://vannguyen1214-fashion-shop.hf.space'
-        },
+            src: 'https://vannguyen1214-fashion-shop.hf.space',
+            script: {
+                type: 'module',
+                src: 'https://gradio.s3-us-west-2.amazonaws.com/5.35.0/gradio.js'
+            }
+        }
     };
 
     // Tạo container cho Gradio apps
@@ -81,11 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
         closeBtn.onclick = hideGradioApp;
 
-        // Tạo Gradio script và app
-        const script = document.createElement('script');
-        script.type = 'module';
-        script.src = 'https://gradio.s3-us-west-2.amazonaws.com/5.35.0/gradio.js';
-
+        // Tạo Gradio app (không cần tạo script vì đã pre-load)
         const gradioApp = document.createElement('gradio-app');
         gradioApp.src = appConfig.src;
         gradioApp.style.cssText = `
@@ -98,19 +114,10 @@ document.addEventListener('DOMContentLoaded', function () {
         container.style.position = 'relative';
         container.appendChild(closeBtn);
         container.appendChild(title);
-        container.appendChild(script);
         container.appendChild(gradioApp);
 
-        // Hiển thị container với animation
+        // Hiển thị container
         container.style.display = 'block';
-        container.style.opacity = '0';
-        container.style.transform = 'translateY(20px)';
-
-        setTimeout(() => {
-            container.style.transition = 'all 0.3s ease';
-            container.style.opacity = '1';
-            container.style.transform = 'translateY(0)';
-        }, 10);
 
         // Scroll to container
         setTimeout(() => {
@@ -124,14 +131,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Ẩn Gradio app
     function hideGradioApp() {
         if (gradioContainer) {
-            gradioContainer.style.transition = 'all 0.3s ease';
-            gradioContainer.style.opacity = '0';
-            gradioContainer.style.transform = 'translateY(-20px)';
-
-            setTimeout(() => {
-                gradioContainer.style.display = 'none';
-                gradioContainer.innerHTML = '';
-            }, 300);
+            gradioContainer.style.display = 'none';
+            gradioContainer.innerHTML = '';
         }
     }
 
@@ -157,7 +158,6 @@ document.addEventListener('DOMContentLoaded', function () {
                         showGradioApp(appConfig);
                     } else {
                         console.log('No Gradio app configured for:', imgName);
-                        // Fallback: hiển thị thông báo
                         alert('Gradio app for this project is coming soon!');
                     }
                 }
