@@ -44,6 +44,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 type: 'module',
                 src: 'https://gradio.s3-us-west-2.amazonaws.com/5.35.0/gradio.js'
             }
+        },
+        'img-6.jpg': {
+            title: 'Depth vision',
+            src: 'https://vannguyen1214-depth-all.hf.space',
+            script: {
+                type: 'module',
+                src: 'https://gradio.s3-us-west-2.amazonaws.com/5.35.0/gradio.js'
+            }
         }
     };
 
