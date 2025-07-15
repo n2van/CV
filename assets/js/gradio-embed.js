@@ -38,8 +38,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         },
         'img-5.jpg': {
-            title: 'Fashion Shop',
-            src: 'https://vannguyen1214-fashion-shop.hf.space',
+            title: 'Gray to Color',
+            src: 'https://vannguyen1214-gray-to-color.hf.space',
             script: {
                 type: 'module',
                 src: 'https://gradio.s3-us-west-2.amazonaws.com/5.35.0/gradio.js'
