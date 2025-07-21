@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const gradioApps = {
         'img-1.jpg': {
             title: '3D Image Generation',
-            src: 'https://vannguyen1214-direct-3d-one-image.hf.space',
+            src: 'https://vannguyen1214-direct-3d-one-image.static.hf.space',
             script: {
                 type: 'module',
                 src: 'https://gradio.s3-us-west-2.amazonaws.com/5.35.0/gradio.js'
