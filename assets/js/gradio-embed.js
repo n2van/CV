@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
             src: 'https://vannguyen1214-direct-3d-one-image.hf.space',
             script: {
                 type: 'module',
-                src: 'https://gradio.s3-us-west-2.amazonaws.com/5.35.0/gradio.js'
+                src: 'https://gradio.s3-us-west-2.amazonaws.com/5.38.0/gradio.js'
             }
         },
         'img-2.jpg': {
